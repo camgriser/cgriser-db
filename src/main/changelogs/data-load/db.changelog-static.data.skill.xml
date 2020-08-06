@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="static_skill" author="cgriser" runOnChange="true">
+        <loadUpdateData tableName="skill" primaryKey="skill_id" file="data-load/data/skill.csv">
+            <column name="skill_type_id" type="NUMERIC"/>
+            <column name="skill_id" type="NUMERIC"/>
+            <column name="skill_descr" type="STRING"/>
+            <column name="rating" type="NUMERIC"/>
+        </loadUpdateData>
+    </changeSet>
+
+</databaseChangeLog>

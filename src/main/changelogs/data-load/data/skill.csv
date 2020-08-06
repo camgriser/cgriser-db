@@ -1,0 +1,51 @@
+skill_type_id,skill_id,skill_descr,rating
+1,1,macOS,8
+1,2,Linux,8
+2,3,Docker,8
+2,4,Apache,8
+2,5,Spring Boot,8
+3,6,Java,9
+3,7,Python,9
+3,8,SQL,10
+3,9,C,5
+3,10,HTML,8
+3,11,CSS,7
+3,12,JavaScript,7
+3,13,Bash,9
+3,14,Curl,9
+3,15,Regex,9
+3,16,Kotlin,7
+3,17,Groovy,7
+3,18,SSH,8
+4,19,PIG,5
+4,20,Hive,8
+4,21,Map Reduce,6
+4,22,Impala,10
+4,23,Oozie,10
+5,24,MongoDB,8
+5,25,Postgres,10
+5,26,Oracle,9
+5,27,Netezza,9
+5,28,CockroachDB,10
+5,29,MemSQL,10
+6,30,Data Modeling,10
+6,31,OLTP,10
+6,32,OLAP,10
+6,33,Data Visualization,9
+6,34,Explain Plans,10
+6,35,Index Strategy,10
+7,36,Linear Regression,7
+7,37,Logistic Regression,7
+7,38,Decision Tree,7
+7,39,SVM,7
+7,40,kNN,7
+7,41,K-Means,7
+7,42,Random Forest,7
+8,43,Spring MVC,9
+8,44,Spring REST,9
+8,45,Spring Thymeleaf,9
+8,46,RabbitMQ,6
+8,47,Liquibase,9
+8,48,Git,9
+8,49,Gradle,6
+8,50,Maven,9

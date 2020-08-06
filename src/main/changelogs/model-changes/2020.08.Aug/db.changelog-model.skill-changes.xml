@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="skill-type" author="cgriser">
+        <preConditions>
+            <not>
+                <tableExists tableName="skill_type"/>
+            </not>
+        </preConditions>
+        <createTable tableName="skill_type">
+            <column name="skill_type_id" type="bigint">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="skill_type_descr" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="skill" author="cgriser">
+        <preConditions>
+            <not>
+                <tableExists tableName="skill"/>
+            </not>
+        </preConditions>
+        <createTable tableName="skill">
+            <column name="skill_type_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="skill_id" type="bigint">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="skill_descr" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rating" type="integer">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="skill" baseColumnNames="skill_type_id" constraintName="skill_type_id"
+                                 referencedTableName="skill_type" referencedColumnNames="skill_type_id"/>
+    </changeSet>
+
+</databaseChangeLog>

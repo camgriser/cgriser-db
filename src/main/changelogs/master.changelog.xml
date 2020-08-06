@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <!-- DDL Changes -->
+    <include relativeToChangelogFile="true" file="model-changes/db.changelog-model.changes-master.xml"/>
+
+    <!-- View Creation -->
+    <include relativeToChangelogFile="true" file="views/db.changelog-views-CREATE-master.xml"/>
+
+    <!-- Procedure Creation -->
+    <include relativeToChangelogFile="true" file="procs/db.changelog-procs-CREATE-master.xml"/>
+
+    <!-- Trigger Creation -->
+    <include relativeToChangelogFile="true" file="triggers/db.changelog-triggers-CREATE-master.xml"/>
+
+    <!-- Static Data -->
+    <include relativeToChangelogFile="true" file="data-load/db.changelog-static.data-master.xml"/>
+
+</databaseChangeLog>
